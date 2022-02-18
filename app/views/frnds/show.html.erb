@@ -1,0 +1,10 @@
+
+
+<%= render @frnd %>
+
+<div >
+  <%= link_to "Edit this frnd", edit_frnd_path(@frnd),class:"btn btn-secondary px-2" %> 
+  <%= link_to "Back to frnds", frnds_path,class:"btn btn-secondary px-2" %>
+
+  <%= button_to "Destroy this frnd", @frnd, method: :delete %>
+</div>
