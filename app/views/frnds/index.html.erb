@@ -2,27 +2,34 @@
 
 
 
-<div id="frnds">
+  <div id="frnds">
+<% if user_signed_in? %>
+    <table class="table table-hover table-bordere">
+    <thead class="table-dark" >
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone_No</th>
+        <th scope="col">Twitter</th>
+        <th scope="col">user Id</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+      <% @frnds.each do |frnd| %>
+      <%= render 'frnd_details',frnd:frnd %>
+    <% end %>
+      
+    </tbody>
+  </table>
 
-  <table class="table table-hover table-bordere">
-  <thead class="table-dark" >
-      <th scope="col">First_Name</th>
-      <th scope="col">Last_Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone_No</th>
-      <th scope="col">Twitter</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @frnds.each do |frnd| %>
-    <%= render 'frnd_details',frnd:frnd %>
-  <% end %>
-    
-  </tbody>
-</table>
+  <%= link_to "New friend", new_frnd_path,class:"btn btn-secondary"%>
+  
+
+
+
+<% else %>
+  <h1>Friend  app</h1>
+  <p>rail first project</p>
+<% end %>
+
 </div>
-
-<%= link_to "New friend", new_frnd_path,class:"btn btn-secondary"%>

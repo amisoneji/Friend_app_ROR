@@ -1,12 +1,14 @@
 <tr>
-      <td><%= frnd.first_name  %></td>
-      <td><%= frnd.last_name %></td>
+
+      <td><%= link_to frnd.first_name + ' ' + frnd.last_name , frnd %></td>
+      
+      </td>
       <td><%= frnd.Email %></td>
       <td><%= frnd.phone_no %></td>
       <td><%= frnd.twitter %></td>
-      <td><%= link_to "Show", frnd %></td>
-      <td><%= link_to "Edit", frnd %></td>
-      <td><%= link_to "Destroy", frnd %></td>
+      <td><%= frnd.user_id%></td>
+      
+      <td><%= link_to "Delete", frnd,class:"btn btn-danger btn-sm" %></td>
      
 </tr>
 

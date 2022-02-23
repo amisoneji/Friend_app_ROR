@@ -1,5 +1,7 @@
 class FrndsController < ApplicationController
   before_action :set_frnd, only: %i[ show edit update destroy ]
+  before_action:authenticate_user!,except:[:index,:show]
+  before_action:correct_user,only:[:edit,:update,:destroy]
 
   # GET /frnds or /frnds.json
   def index
@@ -12,7 +14,8 @@ class FrndsController < ApplicationController
 
   # GET /frnds/new
   def new
-    @frnd = Frnd.new
+    #@frnd = Frnd.new
+    @friend=current_user.frnds.build
   end
 
   # GET /frnds/1/edit
@@ -21,11 +24,13 @@ class FrndsController < ApplicationController
 
   # POST /frnds or /frnds.json
   def create
-    @frnd = Frnd.new(frnd_params)
+    #@frnd = Frnd.new(frnd_params)
+    @friend=current_user.frnds.build(frnd_params)
+  #end
 
     respond_to do |format|
       if @frnd.save
-        format.html { redirect_to frnd_url(@frnd), notice: "Frnd was successfully created." }
+      frnd_params  format.html { redirect_to frnd_url(@frnd), notice: "Frnd was successfully created." }
         format.json { render :show, status: :created, location: @frnd }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -57,6 +62,11 @@ class FrndsController < ApplicationController
     end
   end
 
+  def correct_user
+    @friend=current_user.frnds.find_by(id: params[:id])
+    redirect_to frnd_path,notice: "Not authorized to edit this friend" if @friend.nil?
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_frnd
@@ -65,6 +75,6 @@ class FrndsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def frnd_params
-      params.require(:frnd).permit(:first_name, :last_name, :Email, :phone_no, :twitter)
+      params.require(:frnd).permit(:first_name, :last_name, :Email, :phone_no, :twitter, :user_id)
     end
 end
