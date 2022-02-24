@@ -9,7 +9,7 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 
 gem "sprockets-rails"
 
-gem 'sqlite3'
+
 
 
 
@@ -54,7 +54,7 @@ gem "bootsnap", require: false
 # end
 
 group :development, :test do
-  #gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :development do
