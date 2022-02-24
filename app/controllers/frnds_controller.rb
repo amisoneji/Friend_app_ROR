@@ -14,9 +14,11 @@ class FrndsController < ApplicationController
 
   # GET /frnds/new
   def new
-    #@frnd = Frnd.new
-    @friend=current_user.frnds.build
-  end
+    @frnd = Frnd.new
+    # @friend=current_user.frnds.build
+end
+
+
 
   # GET /frnds/1/edit
   def edit
