@@ -26,13 +26,13 @@ end
 
   # POST /frnds or /frnds.json
   def create
-    #@frnd = Frnd.new(frnd_params)
-    @friend=current_user.frnds.build(frnd_params)
+    @frnd = Frnd.new(frnd_params)
+    # @frnd=current_user.frnds.build(frnd_params)
   #end
 
     respond_to do |format|
       if @frnd.save
-      frnd_params  format.html { redirect_to frnd_url(@frnd), notice: "Frnd was successfully created." }
+        format.html { redirect_to frnd_url(@frnd), notice: "Frnd was successfully created." }
         format.json { render :show, status: :created, location: @frnd }
       else
         format.html { render :new, status: :unprocessable_entity }

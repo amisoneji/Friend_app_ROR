@@ -19040,3 +19040,1032 @@ Processing by FrndsController#show as HTML
 Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 4435)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-24 14:59:09 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.8ms | Allocations: 415)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 34.3ms | Allocations: 11394)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 593)
+  Rendered layout layouts/application.html.erb (Duration: 94.7ms | Allocations: 45477)
+Completed 200 OK in 106ms (Views: 96.8ms | ActiveRecord: 1.5ms | Allocations: 49440)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2022-02-24 14:59:12 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms | Allocations: 4124)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-24 14:59:12 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  Rendered frnds/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 352)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 153)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2935)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 3277)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-02-24 14:59:15 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 602)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2895)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5257)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 6586)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-02-24 14:59:24 +0530
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ui@ui.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ui@ui.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 298ms (ActiveRecord: 0.2ms | Allocations: 3345)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-24 14:59:24 +0530
+Processing by FrndsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1828)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 192)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4237)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 4628)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 14:59:27 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 13.0ms | Allocations: 3033)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 3310)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5618)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 0.1ms | Allocations: 7201)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 14:59:40 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"dd", "last_name"=>"sdcdd", "Email"=>"dddd", "phone_no"=>"22222", "twitter"=>"aa", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 4409)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/frnds_controller.rb:34:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/" for 127.0.0.1 at 2022-02-24 15:05:03 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 10.1ms | Allocations: 415)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 11387)
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 593)
+  Rendered layout layouts/application.html.erb (Duration: 95.0ms | Allocations: 46102)
+Completed 200 OK in 102ms (Views: 95.2ms | ActiveRecord: 1.8ms | Allocations: 50068)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-24 15:05:03 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1788)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4107)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 4443)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:05:05 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 10.6ms | Allocations: 2937)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3215)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5522)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 0.1ms | Allocations: 7820)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:05:20 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"rrrfde", "last_name"=>"ferf", "Email"=>"ffvrf", "phone_no"=>"23444", "twitter"=>"cdc", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 4511)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/frnds_controller.rb:34:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/" for 127.0.0.1 at 2022-02-24 15:07:22 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 6892)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 20629)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 2.3ms | Allocations: 21792)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-24 15:07:22 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1767)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4086)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 4422)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:07:23 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 1.9ms | Allocations: 672)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 767)
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3075)
+Completed 200 OK in 17ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 5185)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:07:36 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"dffrfr", "last_name"=>"ffr", "Email"=>"vfv", "phone_no"=>"1334", "twitter"=>"cfvf", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.4ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "dffrfr"], ["last_name", "ffr"], ["Email", "vfv"], ["phone_no", 1334], ["twitter", "cfvf"], ["created_at", "2022-02-24 09:37:36.201281"], ["updated_at", "2022-02-24 09:37:36.201281"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.6ms | Allocations: 4951)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/frnds_controller.rb:79:in `frnd_params'
+app/controllers/frnds_controller.rb:35:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:08:14 +0530
+Processing by FrndsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 1.8ms | Allocations: 711)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 816)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 14543)
+Completed 200 OK in 36ms (Views: 18.5ms | ActiveRecord: 1.9ms | Allocations: 22617)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:08:28 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"fer", "last_name"=>"eeff", "Email"=>"eeee", "phone_no"=>"123", "twitter"=>"dddd", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.3ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "fer"], ["last_name", "eeff"], ["Email", "eeee"], ["phone_no", 123], ["twitter", "dddd"], ["created_at", "2022-02-24 09:38:28.683996"], ["updated_at", "2022-02-24 09:38:28.683996"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.1ms | Allocations: 3704)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/frnds_controller.rb:79:in `frnd_params'
+app/controllers/frnds_controller.rb:35:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/" for 127.0.0.1 at 2022-02-24 15:11:05 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 147)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 7165)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 20901)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 2.2ms | Allocations: 22061)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-24 15:11:05 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2072)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4391)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 4726)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:11:10 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 1.3ms | Allocations: 672)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 767)
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3074)
+Completed 200 OK in 20ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 5155)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:11:21 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"eded", "last_name"=>"ed", "Email"=>"eee", "phone_no"=>"233", "twitter"=>"dc", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.4ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "eded"], ["last_name", "ed"], ["Email", "eee"], ["phone_no", 233], ["twitter", "dc"], ["created_at", "2022-02-24 09:41:21.128383"], ["updated_at", "2022-02-24 09:41:21.128383"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.8ms | Allocations: 3666)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/frnds_controller.rb:79:in `frnd_params'
+app/controllers/frnds_controller.rb:35:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:12:27 +0530
+Processing by FrndsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 1.5ms | Allocations: 711)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 816)
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 14543)
+Completed 200 OK in 42ms (Views: 25.6ms | ActiveRecord: 1.8ms | Allocations: 22600)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:12:44 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"ee", "last_name"=>"sds", "Email"=>"ddd", "phone_no"=>"3337", "twitter"=>"ee", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.3ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "ee"], ["last_name", "sds"], ["Email", "ddd"], ["phone_no", 3337], ["twitter", "ee"], ["created_at", "2022-02-24 09:42:44.485442"], ["updated_at", "2022-02-24 09:42:44.485442"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.3ms | Allocations: 3718)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/frnds_controller.rb:79:in `frnd_params'
+app/controllers/frnds_controller.rb:35:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/" for 127.0.0.1 at 2022-02-24 15:12:47 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.3ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2471)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4806)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.5ms | Allocations: 5149)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-24 15:12:47 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2380)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4705)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5041)
+
+
+Started GET "/frnds/15" for 127.0.0.1 at 2022-02-24 15:12:55 +0530
+Processing by FrndsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:75:in `set_frnd'
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/show.html.erb within layouts/application
+  Rendered frnds/_frnd.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered frnds/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1189)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:26
+  Rendered home/_header.html.erb (Duration: 4.2ms | Allocations: 905)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4200)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.4ms | Allocations: 5206)
+
+
+Started DELETE "/frnds/15" for 127.0.0.1 at 2022-02-24 15:12:58 +0530
+Processing by FrndsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"15"}
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:75:in `set_frnd'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."user_id" = ? AND "frnds"."id" = ? LIMIT ?[0m  [["user_id", 8], ["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:68:in `correct_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+  [1m[36mFrnd Destroy (0.3ms)[0m  [1m[31mDELETE FROM "frnds" WHERE "frnds"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+Redirected to http://localhost:3000/frnds
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms | Allocations: 4189)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:12:58 +0530
+Processing by FrndsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2300)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 192)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4906)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.6ms | Allocations: 5294)
+
+
+Started GET "/frnds/14" for 127.0.0.1 at 2022-02-24 15:13:03 +0530
+Processing by FrndsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:75:in `set_frnd'
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/show.html.erb within layouts/application
+  Rendered frnds/_frnd.html.erb (Duration: 0.3ms | Allocations: 29)
+  Rendered frnds/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 523)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:26
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 905)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3534)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 4316)
+
+
+Started DELETE "/frnds/14" for 127.0.0.1 at 2022-02-24 15:13:05 +0530
+Processing by FrndsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"14"}
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:75:in `set_frnd'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."user_id" = ? AND "frnds"."id" = ? LIMIT ?[0m  [["user_id", 8], ["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:68:in `correct_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+  [1m[36mFrnd Destroy (0.2ms)[0m  [1m[31mDELETE FROM "frnds" WHERE "frnds"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+Redirected to http://localhost:3000/frnds
+Completed 302 Found in 11ms (ActiveRecord: 2.7ms | Allocations: 3941)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:13:05 +0530
+Processing by FrndsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.6ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2087)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 192)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4491)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 4832)
+
+
+Started GET "/frnds/13" for 127.0.0.1 at 2022-02-24 15:13:08 +0530
+Processing by FrndsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:75:in `set_frnd'
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/show.html.erb within layouts/application
+  Rendered frnds/_frnd.html.erb (Duration: 0.3ms | Allocations: 29)
+  Rendered frnds/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 523)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:26
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 905)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3534)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 4316)
+
+
+Started DELETE "/frnds/13" for 127.0.0.1 at 2022-02-24 15:13:10 +0530
+Processing by FrndsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"13"}
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:75:in `set_frnd'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."user_id" = ? AND "frnds"."id" = ? LIMIT ?[0m  [["user_id", 8], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:68:in `correct_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+  [1m[36mFrnd Destroy (0.3ms)[0m  [1m[31mDELETE FROM "frnds" WHERE "frnds"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:59:in `destroy'
+Redirected to http://localhost:3000/frnds
+Completed 302 Found in 12ms (ActiveRecord: 3.3ms | Allocations: 3951)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:13:10 +0530
+Processing by FrndsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.9ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1948)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 192)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4352)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 4693)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:16:21 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 4.6ms | Allocations: 619)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 712)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 3019)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 4520)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:16:42 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"e3e3", "last_name"=>"wewe", "Email"=>"ssdw", "phone_no"=>"2233", "twitter"=>"wsded", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.2ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "e3e3"], ["last_name", "wewe"], ["Email", "ssdw"], ["phone_no", 2233], ["twitter", "wsded"], ["created_at", "2022-02-24 09:46:42.725064"], ["updated_at", "2022-02-24 09:46:42.725064"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 19.9ms | Allocations: 3375)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/frnds_controller.rb:79:in `frnd_params'
+app/controllers/frnds_controller.rb:35:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:16:45 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2091)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4426)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 4765)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:16:45 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2086)
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4405)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 4740)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:17:46 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 2.3ms | Allocations: 619)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 712)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3019)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 4508)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:18:09 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"aa", "last_name"=>"bb", "Email"=>"swwd", "phone_no"=>"122", "twitter"=>"aa", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.4ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "aa"], ["last_name", "bb"], ["Email", "swwd"], ["phone_no", 122], ["twitter", "aa"], ["created_at", "2022-02-24 09:48:10.000053"], ["updated_at", "2022-02-24 09:48:10.000053"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.8ms | Allocations: 3361)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/frnds_controller.rb:79:in `frnd_params'
+app/controllers/frnds_controller.rb:35:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:18:26 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.3ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2227)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4562)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 4901)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:18:26 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2220)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4539)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4874)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:20:46 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.4ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2216)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4535)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.6ms | Allocations: 4870)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:20:50 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 1.6ms | Allocations: 619)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 712)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3028)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 4527)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:21:09 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"ewrw", "last_name"=>"ewr", "Email"=>"dwe@xads.ccc", "phone_no"=>"12676746", "twitter"=>"sad", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.3ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "ewrw"], ["last_name", "ewr"], ["Email", "dwe@xads.ccc"], ["phone_no", 12676746], ["twitter", "sad"], ["created_at", "2022-02-24 09:51:09.520947"], ["updated_at", "2022-02-24 09:51:09.520947"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.7ms | Allocations: 3363)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/frnds_controller.rb:79:in `frnd_params'
+app/controllers/frnds_controller.rb:35:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:23:04 +0530
+Processing by FrndsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 1.3ms | Allocations: 711)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 816)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 14541)
+Completed 200 OK in 44ms (Views: 25.5ms | ActiveRecord: 3.5ms | Allocations: 22604)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:23:21 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"sad", "last_name"=>"asd", "Email"=>"xsa@dsf.dsd", "phone_no"=>"1234567", "twitter"=>"dxd", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.5ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "sad"], ["last_name", "asd"], ["Email", "xsa@dsf.dsd"], ["phone_no", 1234567], ["twitter", "dxd"], ["created_at", "2022-02-24 09:53:21.290303"], ["updated_at", "2022-02-24 09:53:21.290303"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.0ms | Allocations: 6589)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<FrndsController:0x00000000026480>):
+  
+app/controllers/frnds_controller.rb:35:in `block in create'
+app/controllers/frnds_controller.rb:33:in `create'
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:23:38 +0530
+Processing by FrndsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 5.8ms | Allocations: 711)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 816)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 14542)
+Completed 200 OK in 45ms (Views: 27.4ms | ActiveRecord: 2.2ms | Allocations: 22594)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:23:41 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"sad", "last_name"=>"asd", "Email"=>"xsa@dsf.dsd", "phone_no"=>"1234567", "twitter"=>"dxd", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 4767)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<FrndsController:0x0000000002b520>):
+  
+app/controllers/frnds_controller.rb:32:in `create'
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:24:02 +0530
+Processing by FrndsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 2.3ms | Allocations: 711)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 816)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 14541)
+Completed 200 OK in 38ms (Views: 21.4ms | ActiveRecord: 2.0ms | Allocations: 22585)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:24:04 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 2612)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 4931)
+Completed 200 OK in 65ms (Views: 57.0ms | ActiveRecord: 0.4ms | Allocations: 5309)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:24:06 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2526)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 192)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4860)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.5ms | Allocations: 5196)
+
+
+Started GET "/frnds/19" for 127.0.0.1 at 2022-02-24 15:24:13 +0530
+Processing by FrndsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mFrnd Load (0.3ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:76:in `set_frnd'
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/show.html.erb within layouts/application
+  Rendered frnds/_frnd.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered frnds/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 614)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:26
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 905)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3625)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 4562)
+
+
+Started DELETE "/frnds/19" for 127.0.0.1 at 2022-02-24 15:24:16 +0530
+Processing by FrndsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"19"}
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:76:in `set_frnd'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."user_id" = ? AND "frnds"."id" = ? LIMIT ?[0m  [["user_id", 8], ["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:69:in `correct_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:60:in `destroy'
+  [1m[36mFrnd Destroy (0.4ms)[0m  [1m[31mDELETE FROM "frnds" WHERE "frnds"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/frnds_controller.rb:60:in `destroy'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:60:in `destroy'
+Redirected to http://localhost:3000/frnds
+Completed 302 Found in 15ms (ActiveRecord: 3.8ms | Allocations: 4244)
+
+
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:24:16 +0530
+Processing by FrndsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.1ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2393)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 192)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4798)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 5140)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:24:21 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 2.6ms | Allocations: 619)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 712)
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3019)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 4520)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:24:38 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"esfs", "last_name"=>"szcd", "Email"=>"dscs@sdcs.sd", "phone_no"=>"1243565", "twitter"=>"sad", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 4233)
+
+
+  
+NameError (undefined local variable or method `debugger' for #<FrndsController:0x00000000030908>):
+  
+app/controllers/frnds_controller.rb:30:in `create'
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:24:53 +0530
+Processing by FrndsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.3ms | Allocations: 7977)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<FrndsController:0x00000000035d90>):
+  
+app/controllers/frnds_controller.rb:17:in `new'
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:25:14 +0530
+Processing by FrndsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 1.8ms | Allocations: 711)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 816)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 14542)
+Completed 200 OK in 33ms (Views: 17.1ms | ActiveRecord: 1.6ms | Allocations: 22583)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:25:27 +0530
+Processing by FrndsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.3ms | Allocations: 7927)
+
+
+  
+NameError (undefined local variable or method `debugger' for #<FrndsController:0x0000000003fea8>):
+  
+app/controllers/frnds_controller.rb:17:in `new'
+Started GET "/frnds" for 127.0.0.1 at 2022-02-24 15:26:13 +0530
+Processing by FrndsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/frnds/index.html.erb:6
+  [1m[36mFrnd Load (0.2ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds"[0m
+  ↳ app/views/frnds/index.html.erb:18
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.3ms | Allocations: 147)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered frnds/_frnd_details.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered frnds/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 7465)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 21225)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 2.0ms | Allocations: 22382)
+
+
+Started GET "/frnds/new" for 127.0.0.1 at 2022-02-24 15:26:15 +0530
+Processing by FrndsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/new.html.erb within layouts/application
+  Rendered frnds/_form.html.erb (Duration: 1.3ms | Allocations: 672)
+  Rendered frnds/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 767)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3076)
+Completed 200 OK in 16ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 5171)
+
+
+Started POST "/frnds" for 127.0.0.1 at 2022-02-24 15:26:37 +0530
+Processing by FrndsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "frnd"=>{"first_name"=>"sdsa", "last_name"=>"sa", "Email"=>"scds@say.sanh", "phone_no"=>"1265781234", "twitter"=>"sda", "user_id"=>"8"}, "commit"=>"Create Frnd"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mFrnd Create (0.4ms)[0m  [1m[32mINSERT INTO "frnds" ("first_name", "last_name", "Email", "phone_no", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "sdsa"], ["last_name", "sa"], ["Email", "scds@say.sanh"], ["phone_no", 1265781234], ["twitter", "sda"], ["created_at", "2022-02-24 09:56:37.328367"], ["updated_at", "2022-02-24 09:56:37.328367"], ["user_id", 8]]
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/frnds_controller.rb:34:in `block in create'
+Redirected to http://localhost:3000/frnds/20
+Completed 302 Found in 14ms (ActiveRecord: 3.1ms | Allocations: 4553)
+
+
+Started GET "/frnds/20" for 127.0.0.1 at 2022-02-24 15:26:37 +0530
+Processing by FrndsController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mFrnd Load (0.3ms)[0m  [1m[34mSELECT "frnds".* FROM "frnds" WHERE "frnds"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/frnds_controller.rb:75:in `set_frnd'
+  Rendering layout layouts/application.html.erb
+  Rendering frnds/show.html.erb within layouts/application
+  Rendered frnds/_frnd.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered frnds/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 609)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:26
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 905)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3706)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 4642)
+
+
